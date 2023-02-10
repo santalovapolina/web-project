@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
@@ -11,6 +12,8 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.ClubsPage;
 import pages.MainPage;
 import pages.SelfStudyPage;
+
+import static com.codeborne.selenide.Selenide.closeWebDriver;
 
 
 public class TestBase {
@@ -32,8 +35,6 @@ public class TestBase {
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
-
-
     }
 
     @BeforeEach
@@ -47,5 +48,10 @@ public class TestBase {
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
+    }
+
+    @AfterEach
+    void close(){
+        closeWebDriver();
     }
 }
