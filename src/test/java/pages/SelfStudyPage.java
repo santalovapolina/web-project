@@ -18,8 +18,9 @@ public class SelfStudyPage {
         return this;
     }
 
-    public SelfStudyPage verifyStudyFormExists() {
-        $$x("//div[@class='catalog-teachers-desktop-name']").findBy(text("Тренажёр слов")).should(exist);
+    public SelfStudyPage verifyStudyFormExists(String studyFormsTitle, String studyForm ) {
+        $x("//h3[@class='catalog-teachers-h3']").shouldHave(text(studyFormsTitle));
+        $$x("//div[@class='catalog-teachers-desktop-name']").findBy(text(studyForm)).should(exist);
         return this;
     }
 }

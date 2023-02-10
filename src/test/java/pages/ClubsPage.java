@@ -7,13 +7,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class ClubsPage {
 
-    public ClubsPage openPage() {
-        open("/clubs");
+    public ClubsPage openPage(String page) {
+        open("http://skyeng.ru" + page);
         return this;
     }
 
-    public ClubsPage verifySchedule() {
-        $x("//adults-life-showcase").$(withText("Расписание")).shouldBe(visible);
+    public ClubsPage verifyFeature(String feature) {
+        $x("//adults-life-showcase").$(withText(feature)).shouldBe(visible);
         return this;
     }
 }

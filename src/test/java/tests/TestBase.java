@@ -8,10 +8,14 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.params.provider.Arguments;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.ClubsPage;
 import pages.MainPage;
 import pages.SelfStudyPage;
+
+import java.util.List;
+import java.util.stream.Stream;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 
