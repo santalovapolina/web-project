@@ -49,7 +49,7 @@ ui_test
 
 - <code>REMOTE</code> адрес удаленного сервера
 
-## <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/3/allure/">Allure report</a>
+## <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/4/allure/">Allure report</a>
 
 ### Обзор сборки
 <p align="center">
