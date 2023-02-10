@@ -37,7 +37,7 @@ public class WebTests extends TestBase {
         step("Перейти на главную страницу", () -> {
             mainPage.openPage();
         });
-        step("Перейти на главную страницу", () -> {
+        step("Проверить, что в верхнем меню есть кнопки {0}", () -> {
             mainPage.verifyHeaderMenuItems(buttons);
         });
     }
