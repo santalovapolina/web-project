@@ -7,7 +7,6 @@ import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import pages.ClubsPage;
 import pages.MainPage;
@@ -24,9 +23,9 @@ public class TestBase {
     static void setUp() {
 
         Configuration.baseUrl = "https://skyeng.ru";
-        Configuration.browserSize = System.getProperty("browserSize");
-        Configuration.browser = System.getProperty("browser");
-        Configuration.browserVersion = System.getProperty("browserVersion");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
         Configuration.remote = System.getProperty("remote");
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -34,12 +33,11 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
 
-//        capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager");
 
     }
 
     @BeforeEach
-    void addListner() {
+    void addListener() {
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
