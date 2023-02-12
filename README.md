@@ -61,7 +61,7 @@ ui_test
 <img title="Allure Suites" src="images/screens/tests.jpg">
 </p>
 
-### Графики
+### :bar_chart: :chart_with_upwards_trend: Графики
 <p align="center">
 <img title="Allure Graphs" src="images/screens/graphs.jpg">
 </p>
