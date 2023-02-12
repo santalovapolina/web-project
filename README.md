@@ -1,6 +1,6 @@
 # :stars: Проект по автоматизации тестирования для Skyeng :stars:
 <a target="_blank" href="https://skyeng.ru">Веб сайт Skyeng</a>
-## Содержание
+## :card_file_box: Содержание
 - [Технологии и инструменты](#технологии-и-инструменты)
 - [Запуск из терминала](#запуск-тестов-из-терминала)
 - [Сборка в Jenkins](#-jenkins--job-)
@@ -8,7 +8,7 @@
 - [Уведомление в Telegram](#-уведомление-в-telegram)
 - [Видео прохождения тестов](#-видео-прохождения-некоторых-тестов)
 
-## Технологии и инструменты
+## :bookmark: Технологии и инструменты
 <p align="center">
 <a href="https://www.jetbrains.com/idea/"><img src="images/logos/IDEA.svg" width="50" height="50"  alt="IDEA"/></a>
 <a href="https://www.java.com/"><img src="images/logos/Java.svg" width="50" height="50"  alt="Java"/></a>
@@ -22,7 +22,7 @@
 <a><img src="images/logos/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
 
-## Запуск тестов из терминала
+## :bookmark: Запуск тестов из терминала
 Локальный запуск:
 ```
 gradle clean ui_test
@@ -37,7 +37,7 @@ ui_test
 -DbrowserSize=${BROWSER_SIZE}
 -Dremote=${REMOTE}
 ```
-## <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/"> job </a> 
+## :bookmark: <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/"> job </a> 
 
 Параметры сборки в Jenkins:
 
@@ -49,7 +49,7 @@ ui_test
 
 - <code>REMOTE</code> адрес удаленного сервера
 
-## <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/4/allure/">Allure report</a>
+## :bookmark: <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/4/allure/">Allure report</a>
 
 ### Обзор сборки
 <p align="center">
@@ -66,13 +66,13 @@ ui_test
 <img title="Allure Graphs" src="images/screens/graphs.jpg">
 </p>
 
-## <img src="images/logos/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram
+## :bookmark: <img src="images/logos/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/telegram.jpg">
 </p>
 
-## <img src="images/logos/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео прохождения некоторых тестов
+## :bookmark: <img src="images/logos/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео прохождения некоторых тестов
 
 ### Тест #3 По ссылке Пройти тест осуществляется переход к тесту на подбор курса
 <p align="center">
