@@ -13,9 +13,9 @@ import java.util.stream.Stream;
 import static io.qameta.allure.Allure.step;
 
 public class WebTests extends TestBase {
-    static Stream<Arguments> headerItemsProvider() {
-        return Stream.of(Arguments.of(List.of(" Взрослым ", " Репетиторы ",
-                " Подарочные сертификаты ", " Онлайн-тест ", " Учителям ", " Ещё ")));
+    static Stream<List<String>> headerItemsProvider() {
+        return Stream.of(List.of(" Взрослым ", " Репетиторы ",
+                " Подарочные сертификаты ", " Онлайн-тест ", " Учителям ", " Ещё "));
     }
 
     @Tag("ui")
