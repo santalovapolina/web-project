@@ -7,6 +7,7 @@
 - [Allure отчет](#bookmark--отчет-в-allure-report)
 - [Уведомление в Telegram](#bookmark--уведомление-в-telegram)
 - [Видео прохождения тестов](#bookmark--видео-прохождения-некоторых-тестов)
+- [Allure TestOps]()
 
 ## :bookmark: Технологии и инструменты
 <p align="center">
@@ -82,4 +83,16 @@ ui_test
 ### Тест #4 После прохождения теста предлагаются подходящие курсы
 <p align="center">
   <img title="Selenoid video for test4" src="images/gif/test4.gif">
+</p>
+
+## :bookmark: Добавление интеграции с Allure TestOps
+
+### Allure TestOps overview
+<p align="center">
+  <img title="Allure TestOps overview" src="images/screens/testops_overview.jpg">
+</p>
+
+### Добавление ручных тестов
+<p align="center">
+  <img title="Allure TestOps manual tests" src="images/screens/manual.jpg">
 </p>
