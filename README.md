@@ -26,7 +26,7 @@
 ## :bookmark: Запуск тестов из терминала
 Локальный запуск:
 ```
-gradle clean ui_test
+gradle clean ui_test -Denv=local
 ```
 
 Удаленный запуск:
