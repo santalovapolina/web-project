@@ -20,6 +20,7 @@
 <a href="https://aerokube.com/selenoid/"><img src="images/logos/Selenoid.svg" width="50" height="50"  alt="Selenoid"/></a>
 <a href="https://github.com/allure-framework/allure2"><img src="images/logos/Allure.svg" width="50" height="50"  alt="Allure"/></a>
 <a href="https://www.jenkins.io/"><img src="images/logos/Jenkins.svg" width="50" height="50"  alt="Jenkins"/></a>
+<a><img src="images/logos/Allure_TO.svg" width="50" height="50"  alt="Allure TestOps"/></a>
 <a><img src="images/logos/Telegram.svg" width="50" height="50"  alt="Telegram"/></a>
 </p>
 
@@ -67,13 +68,13 @@ ui_test
 <img title="Allure Graphs" src="images/screens/graphs.jpg">
 </p>
 
-## :bookmark: <img src="images/logos/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram
+## :bookmark: <img src="images/logos/Telegram.svg" width="25" height="25"  alt="Telegram"/></a> Уведомление в Telegram
 
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/telegram.jpg">
 </p>
 
-## :bookmark: <img src="images/logos/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео прохождения некоторых тестов
+## :bookmark: <img src="images/logos/Selenoid.svg" width="25" height="25" alt="Selenoid"/></a> Видео прохождения некоторых тестов
 
 ### Тест #3 По ссылке Пройти тест осуществляется переход к тесту на подбор курса
 <p align="center">
@@ -85,7 +86,7 @@ ui_test
   <img title="Selenoid video for test4" src="images/gif/test4.gif">
 </p>
 
-## :bookmark: Добавление интеграции с Allure TestOps
+## :bookmark: <img src="images/logos/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
 
 ### Allure TestOps overview
 <p align="center">
