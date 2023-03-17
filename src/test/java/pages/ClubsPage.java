@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class ClubsPage {
 
     public ClubsPage openPage(String page) {
-        open("http://skyeng.ru" + page);
+        open("https://skyeng.ru" + page);
         return this;
     }
 

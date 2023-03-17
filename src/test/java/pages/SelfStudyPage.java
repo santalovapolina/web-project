@@ -9,7 +9,7 @@ public class SelfStudyPage {
     private final String SELF_STUDY_HEADER = "Самостоятельные занятия английским";
 
     public SelfStudyPage openPage() {
-        open("/self-study");
+        open("https://skyeng.ru" + "/self-study");
         return this;
     }
 
@@ -20,7 +20,8 @@ public class SelfStudyPage {
 
     public SelfStudyPage verifyStudyFormExists(String studyFormsTitle, String studyForm ) {
         $x("//h3[@class='catalog-teachers-h3']").shouldHave(text(studyFormsTitle));
-        $$x("//div[@class='catalog-teachers-desktop-name']").findBy(text(studyForm)).should(exist);
+        $$x("//div[@class='catalog-teachers-desktop-name']").findBy(text(studyForm))
+                .should(exist);
         return this;
     }
 }
