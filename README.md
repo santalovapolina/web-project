@@ -34,10 +34,7 @@ gradle clean ui_test -Denv=local
 ```
 clean
 ui_test
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--Dremote=${REMOTE}
+-Denv=${remote}
 ```
 ## :bookmark: <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/"> job </a> 
 
