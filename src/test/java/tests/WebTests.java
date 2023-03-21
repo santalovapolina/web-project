@@ -1,5 +1,8 @@
 package tests;
 
+import io.qameta.allure.Owner;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -19,6 +22,8 @@ public class WebTests extends TestBase {
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("В верхнем меню 6 разделов")
     @Test
     public void positiveTest1() {
@@ -30,9 +35,11 @@ public class WebTests extends TestBase {
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.CRITICAL)
     @MethodSource("headerItemsProvider")
     @ParameterizedTest(name = "В верхнем меню отображаются кнопки {0}")
-    void parameterizedTest1(List<String> buttons) {
+    public void parameterizedTest1(List<String> buttons) {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
@@ -41,19 +48,23 @@ public class WebTests extends TestBase {
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {"Взрослым, Self-Study"})
     @ParameterizedTest(name = "В разделе {0} есть формат {1}")
     public void positiveTest2(String menuItem, String productForm) {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
-        step("Навести курсор на раздел {0}", () ->
+        step("Навести курсор на раздел", () ->
                 mainPage.hoverMenuItem(menuItem));
-        step("Проверить, что в каталоге есть формат {1}", () ->
+        step("Проверить, что в каталоге есть нужный формат", () ->
                 mainPage.verifyProduct(productForm));
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.CRITICAL)
     @DisplayName("По ссылке Пройти тест осуществляется переход к тесту на подбор курса")
     @Test
     public void positiveTest3() {
@@ -69,6 +80,8 @@ public class WebTests extends TestBase {
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {"Для работы, Средний", "Для заграничных поездок, Начинающий"})
     @ParameterizedTest(name = "После выбора цели обучения {0} и уровня языка {1} отображаются подходящие курсы")
     public void positiveTest4(String purpose, String level) {
@@ -84,6 +97,8 @@ public class WebTests extends TestBase {
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {"Форматы обучения, Тренажёр слов"})
     @ParameterizedTest(name = "В блоке {0} должен быть формат {1}")
     public void positiveTest5(String studyFormsTitle, String studyForm) {
@@ -92,11 +107,13 @@ public class WebTests extends TestBase {
                 selfStudyPage.openPage());
         step("Проверить заголовок страницы", () ->
                 selfStudyPage.verifyHeader());
-        step("Проверить, что в {0} есть {1}", () ->
+        step("Проверить, что в Форматах обучения есть Тренажер слов", () ->
                 selfStudyPage.verifyStudyFormExists(studyFormsTitle, studyForm));
     }
 
     @Tag("ui")
+    @Owner(value = "Santalova Polina")
+    @Severity(SeverityLevel.NORMAL)
     @CsvSource(value = {"/clubs, Расписание"})
     @ParameterizedTest(name = "На странице {0} должно быть {1}")
     public void positiveTest6(String page, String feature) {

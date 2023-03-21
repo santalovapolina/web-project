@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import static com.codeborne.selenide.CollectionCondition.size;
@@ -52,8 +53,10 @@ public class MainPage {
     }
 
     public MainPage setPurposeAndLevel(String purpose, String level) {
-        $$x("//home-quiz-selection-item").findBy(text(purpose)).click();
-        $$x("//home-quiz-selection-item").findBy(text(level)).click();
+        $$x("//home-quiz-selection-item").findBy(text(purpose))
+                .shouldBe(visible, Duration.ofSeconds(10)).click();
+        $$x("//home-quiz-selection-item").findBy(text(level))
+                .shouldBe(visible, Duration.ofSeconds(10)).click();
         return this;
     }
 
