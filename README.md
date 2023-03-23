@@ -36,9 +36,9 @@ clean
 ui_test
 -Denv=${remote}
 ```
-## :bookmark: <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/"> job </a> 
+## :bookmark: <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-diploma-web/"> job </a> 
 
-## :bookmark: <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/4/allure/">Allure report</a>
+## :bookmark: <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-diploma-web/5/allure/">Allure report</a>
 
 ### Обзор сборки
 <p align="center">
