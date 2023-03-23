@@ -34,10 +34,7 @@ gradle clean ui_test -Denv=local
 ```
 clean
 ui_test
--Dbrowser=${BROWSER}
--DbrowserVersion=${BROWSER_VERSION}
--DbrowserSize=${BROWSER_SIZE}
--Dremote=${REMOTE}
+-Denv=${remote}
 ```
 ## :bookmark: <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/"> job </a> 
 
@@ -87,10 +84,11 @@ ui_test
 </p>
 
 ## :bookmark: <img src="images/logos/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
+<a target="_blank" href="https://allure.autotests.cloud/project/2060/jobs">Job</a>
 
-### Allure TestOps overview
+### Allure TestOps dashboard
 <p align="center">
-  <img title="Allure TestOps overview" src="images/screens/testops_overview.jpg">
+  <img title="Allure TestOps overview" src="images/screens/dashboard.jpg">
 </p>
 
 ### Добавление ручных тестов
