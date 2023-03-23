@@ -74,6 +74,7 @@ ui_test
 </p>
 
 ## :bookmark: <img src="images/logos/Allure_TO.svg" width="25" height="25" alt="Allure TestOps"/></a> Добавление интеграции с Allure TestOps
+<a target="_blank" href="https://allure.autotests.cloud/project/2060/jobs">Job</a>
 
 ### Allure TestOps overview
 <p align="center">
