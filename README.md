@@ -1,4 +1,4 @@
-# :stars: Проект по автоматизации тестирования веб для Skyeng
+# Проект по автоматизации тестирования веб для Skyeng
 <a target="_blank" href="https://skyeng.ru">Веб сайт Skyeng</a>
 ## :card_file_box: Содержание
 - [Технологии и инструменты](#bookmark-технологии-и-инструменты)
@@ -37,16 +37,6 @@ ui_test
 -Denv=${remote}
 ```
 ## :bookmark: <img src="images/logos/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/"> job </a> 
-
-Параметры сборки в Jenkins:
-
-- <code>BROWSER</code> браузер, по умолчанию chrome
-
-- <code>BROWSER_VERSION</code> версия браузера, по умолчанию 100.0
-
-- <code>BROWSER_SIZE</code> размер окна браузера, по умолчанию 1920x1080
-
-- <code>REMOTE</code> адрес удаленного сервера
 
 ## :bookmark: <img src="images/logos/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/pols-skyeng-ui/4/allure/">Allure report</a>
 
