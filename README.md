@@ -2,6 +2,7 @@
 <p align="center">
 <a href="https://skyeng.ru"><img src="images/logos/skyeng.jpg"/></a>
 </p>
+
 ## :card_file_box: Содержание
 - [Технологии и инструменты](#bookmark-технологии-и-инструменты)
 - [Запуск из терминала](#bookmark-запуск-тестов-из-терминала)
