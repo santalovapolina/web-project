@@ -1,5 +1,7 @@
-# Проект по автоматизации тестирования веб для Skyeng
-<a target="_blank" href="https://skyeng.ru">Веб сайт Skyeng</a>
+# Проект по автоматизации тестирования WEB
+<p align="center">
+<a href="https://skyeng.ru"><img src="images/logos/skyeng.jpg"/></a>
+</p>
 ## :card_file_box: Содержание
 - [Технологии и инструменты](#bookmark-технологии-и-инструменты)
 - [Запуск из терминала](#bookmark-запуск-тестов-из-терминала)
@@ -7,7 +9,7 @@
 - [Allure отчет](#bookmark--отчет-в-allure-report)
 - [Уведомление в Telegram](#bookmark--уведомление-в-telegram)
 - [Видео прохождения тестов](#bookmark--видео-прохождения-некоторых-тестов)
-- [Allure TestOps]()
+- [Allure TestOps](#bookmark--добавление-интеграции-с-allure-testops)
 
 ## :bookmark: Технологии и инструменты
 <p align="center">
@@ -78,7 +80,7 @@ ui_test
 
 ### Allure TestOps dashboard
 <p align="center">
-  <img title="Allure TestOps overview" src="images/screens/dashboard.jpg">
+  <img title="Allure TestOps dashboard" src="images/screens/dashboard.jpg">
 </p>
 
 ### Добавление ручных тестов
