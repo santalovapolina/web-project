@@ -7,6 +7,7 @@ import org.aeonbits.owner.Config;
 public interface WebDriverConfig extends Config {
 
     @Key("baseUrl")
+    @DefaultValue("https://skyeng.ru")
     String getBaseUrl();
 
     @Key("browserSize")

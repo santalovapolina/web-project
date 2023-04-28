@@ -6,6 +6,7 @@ import java.util.List;
 import static com.codeborne.selenide.CollectionCondition.size;
 import static com.codeborne.selenide.CollectionCondition.texts;
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -13,7 +14,7 @@ public class MainPage {
     private static final String QUIZ_TITLE = "Узнайте, какой курс вам подходит";
 
     public MainPage openPage() {
-        open("https://skyeng.ru");
+        open(baseUrl);
         return this;
     }
 

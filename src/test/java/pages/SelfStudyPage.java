@@ -2,14 +2,16 @@ package pages;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelfStudyPage {
 
     private final String SELF_STUDY_HEADER = "Самостоятельные занятия английским";
 
+
     public SelfStudyPage openPage() {
-        open("https://skyeng.ru" + "/self-study");
+        open(baseUrl + "/self-study");
         return this;
     }
 

@@ -1,6 +1,7 @@
 package tests;
 
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import config.WebDriverProvider;
 import helpers.Attach;
@@ -26,6 +27,9 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         WebDriverProvider.setConfig();
+        Configuration.pageLoadStrategy = "eager";
+        Configuration.pageLoadTimeout = 100000;
+        Configuration.timeout = 15000;
     }
 
     @BeforeEach
@@ -35,15 +39,12 @@ public class TestBase {
     }
 
     @AfterEach
-    void addAttachments() {
+    void tearDown() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
         Attach.addVideo();
-    }
-
-    @AfterEach
-    void close(){
         closeWebDriver();
     }
+
 }

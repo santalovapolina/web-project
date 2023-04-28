@@ -15,18 +15,18 @@ import java.util.stream.Stream;
 
 import static io.qameta.allure.Allure.step;
 
+@Tag("ui")
+@Owner(value = "Santalova Polina")
 public class WebTests extends TestBase {
     static Stream<List<String>> headerItemsProvider() {
         return Stream.of(List.of("Взрослым", "Репетиторы",
                 "Подарочные сертификаты", "Онлайн-тест", "Учителям", "Другие курсы"));
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("В верхнем меню 6 разделов")
     @Test
-    public void positiveTest1() {
+    @DisplayName("В верхнем меню 6 разделов")
+    @Severity(SeverityLevel.CRITICAL)
+    public void checkHeaderMenuSectionsTest() {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
@@ -34,12 +34,11 @@ public class WebTests extends TestBase {
                 mainPage.verifyHeaderMenuSize());
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.CRITICAL)
-    @MethodSource("headerItemsProvider")
+
     @ParameterizedTest(name = "В верхнем меню отображаются кнопки {0}")
-    public void parameterizedTest1(List<String> buttons) {
+    @MethodSource("headerItemsProvider")
+    @Severity(SeverityLevel.CRITICAL)
+    public void checkHeaderMenuButtonsTest(List<String> buttons) {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
@@ -47,12 +46,11 @@ public class WebTests extends TestBase {
                 mainPage.verifyHeaderMenuItems(buttons));
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.NORMAL)
-    @CsvSource(value = {"Взрослым, Self-Study"})
+
     @ParameterizedTest(name = "В разделе {0} есть формат {1}")
-    public void positiveTest2(String menuItem, String productForm) {
+    @CsvSource(value = {"Взрослым, Self-Study"})
+    @Severity(SeverityLevel.NORMAL)
+    public void checkProductFormForMenuItemTest(String menuItem, String productForm) {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
@@ -62,12 +60,11 @@ public class WebTests extends TestBase {
                 mainPage.verifyProduct(productForm));
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.CRITICAL)
-    @DisplayName("По ссылке Пройти тест осуществляется переход к тесту на подбор курса")
+
     @Test
-    public void positiveTest3() {
+    @DisplayName("По ссылке Пройти тест осуществляется переход к тесту на подбор курса")
+    @Severity(SeverityLevel.CRITICAL)
+    public void checkSwitchingToCoursesTestThruLink() {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
@@ -79,12 +76,11 @@ public class WebTests extends TestBase {
                 mainPage.verifyQuizTitle());
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.NORMAL)
-    @CsvSource(value = {"Для работы, Средний", "Для заграничных поездок, Начинающий"})
+
     @ParameterizedTest(name = "После выбора цели обучения {0} и уровня языка {1} отображаются подходящие курсы")
-    public void positiveTest4(String purpose, String level) {
+    @CsvSource(value = {"Для работы, Средний", "Для заграничных поездок, Начинающий"})
+    @Severity(SeverityLevel.NORMAL)
+    public void checkCoursesResultDependsOnUserPurposeAndLevel(String purpose, String level) {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
@@ -96,12 +92,11 @@ public class WebTests extends TestBase {
                 mainPage.verifySuitableCourses());
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.NORMAL)
-    @CsvSource(value = {"Форматы обучения, Тренажёр слов"})
+
     @ParameterizedTest(name = "В блоке {0} должен быть формат {1}")
-    public void positiveTest5(String studyFormsTitle, String studyForm) {
+    @CsvSource(value = {"Форматы обучения, Тренажёр слов"})
+    @Severity(SeverityLevel.NORMAL)
+    public void checkStudyFormExistsOnStudyFormSectionTest(String studyFormsTitle, String studyForm) {
 
         step("Перейти на страницу Self-Study", () ->
                 selfStudyPage.openPage());
@@ -111,12 +106,11 @@ public class WebTests extends TestBase {
                 selfStudyPage.verifyStudyFormExists(studyFormsTitle, studyForm));
     }
 
-    @Tag("ui")
-    @Owner(value = "Santalova Polina")
-    @Severity(SeverityLevel.NORMAL)
-    @CsvSource(value = {"/clubs, Расписание"})
+
     @ParameterizedTest(name = "На странице {0} должно быть {1}")
-    public void positiveTest6(String page, String feature) {
+    @CsvSource(value = {"/clubs, Расписание"})
+    @Severity(SeverityLevel.NORMAL)
+    public void checkFeatureExistsOnPage(String page, String feature) {
 
         step("Перейти на страницу {0}", () ->
                 clubsPage.openPage(page));
