@@ -1,4 +1,4 @@
-package tests;
+package tests.web;
 
 
 import com.codeborne.selenide.Configuration;

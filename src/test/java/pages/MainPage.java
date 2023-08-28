@@ -1,5 +1,8 @@
 package pages;
 
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
+
 import java.time.Duration;
 import java.util.List;
 
@@ -18,56 +21,67 @@ public class MainPage {
         return this;
     }
 
+    private ElementsCollection headerTabs = $(".navigation").$$(".navigation-item"),
+            headerTabsTitles = $$x("//div[@class='header-menu-item']"),
+            purposeAndLevel = $$x("//home-quiz-selection-item"),
+            productForms = $$x("//div[@class='product-catalog-title']");
+
+    private final SelenideElement headerToggleMenu = $("div.header-menu-toggle-container"),
+            quiz = $x("//div[@class='quiz-body']"),
+            quizTitle = $x("//h3[@class='quiz-title']"),
+            progressBar = $x("//home-quiz-progress-circle[@class='loader']"),
+            coursesList = $x("//div[@class='courses-list']");
+
     public MainPage verifyHeaderMenuSize() {
-        $(".navigation").$$(".navigation-item").shouldHave(size(6));
+        headerTabs.shouldHave(size(7));
         return this;
     }
 
     public MainPage verifyHeaderMenuItems(List<String> buttons) {
-        $$(".header-menu-item").filter(visible).shouldHave(texts(buttons));
+        headerTabsTitles.filter(visible).shouldHave(texts(buttons));
         return this;
     }
 
     public MainPage hoverMenuItem(String menuItem) {
-        $("div.header-menu-toggle-container").$(byText(menuItem)).hover();
+        headerToggleMenu.$(byText(menuItem)).hover();
         return this;
     }
 
     public MainPage verifyProduct(String productForm) {
-        $x("(//div[@class='product-catalog-container'])[2]").shouldHave(text(productForm));
+        productForms.findBy(text(productForm)).shouldBe(visible);
         return this;
     }
 
     public MainPage clickPassTest() {
-        $x("//div[@class='note-item -desktop']/span[@class='note-link']").click();
+        $x("//div[@class='note-item -desktop']/span[@class='note-link']").click(); // ссылка отсутствует
         return this;
     }
 
     public MainPage verifyQuizAppears() {
-        $x("//div[@class='quiz-body']").should(appear);
+        quiz.should(appear);
         return this;
     }
 
     public MainPage verifyQuizTitle() {
-        $x("//h3[@class='quiz-title']").shouldHave(text(QUIZ_TITLE));
+        quizTitle.shouldHave(text(QUIZ_TITLE));
         return this;
     }
 
     public MainPage setPurposeAndLevel(String purpose, String level) {
-        $$x("//home-quiz-selection-item").findBy(text(purpose))
+        purposeAndLevel.findBy(text(purpose))
                 .shouldBe(visible, Duration.ofSeconds(10)).click();
-        $$x("//home-quiz-selection-item").findBy(text(level))
+        purposeAndLevel.findBy(text(level))
                 .shouldBe(visible, Duration.ofSeconds(10)).click();
         return this;
     }
 
     public MainPage verifyProgressBarAppears() {
-        $x("//home-quiz-progress-circle[@class='loader']").should(appear);
+        progressBar.should(appear);
         return this;
     }
 
     public MainPage verifySuitableCourses() {
-        $x("//div[@class='courses-list']").should(exist);
+        coursesList.should(exist);
         return this;
     }
 }

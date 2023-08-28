@@ -1,5 +1,8 @@
 package pages;
 
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
+
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Configuration.baseUrl;
@@ -9,6 +12,11 @@ public class SelfStudyPage {
 
     private final String SELF_STUDY_HEADER = "Самостоятельные занятия английским";
 
+    private final SelenideElement pageHeader = $("h1"),
+    studyFormats = $x("//h3[@class='catalog-teachers-h3']");
+
+    private final ElementsCollection formatsForStudy = $$x("//div[@class='catalog-teachers-desktop-name']");
+
 
     public SelfStudyPage openPage() {
         open(baseUrl + "/self-study");
@@ -16,13 +24,13 @@ public class SelfStudyPage {
     }
 
     public SelfStudyPage verifyHeader() {
-        $("h1").shouldHave(text(SELF_STUDY_HEADER));
+        pageHeader.shouldHave(text(SELF_STUDY_HEADER));
         return this;
     }
 
     public SelfStudyPage verifyStudyFormExists(String studyFormsTitle, String studyForm ) {
-        $x("//h3[@class='catalog-teachers-h3']").shouldHave(text(studyFormsTitle));
-        $$x("//div[@class='catalog-teachers-desktop-name']").findBy(text(studyForm))
+        studyFormats.shouldHave(text(studyFormsTitle));
+        formatsForStudy.findBy(text(studyForm))
                 .should(exist);
         return this;
     }

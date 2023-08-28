@@ -1,8 +1,9 @@
-package tests;
+package tests.web;
 
 import io.qameta.allure.Owner;
 import io.qameta.allure.Severity;
 import io.qameta.allure.SeverityLevel;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -20,20 +21,18 @@ import static io.qameta.allure.Allure.step;
 public class WebTests extends TestBase {
     static Stream<List<String>> headerItemsProvider() {
         return Stream.of(List.of("Взрослым", "Репетиторы",
-                "Подарочные сертификаты", "Онлайн-тест", "Учителям", "Другие курсы"));
+                "Сертификаты", "Подготовиться к ЕГЭ", "Онлайн-тест", "Учителям", "Другие курсы"));
     }
-
     @Test
-    @DisplayName("В верхнем меню 6 разделов")
+    @DisplayName("В верхнем меню 7 разделов")
     @Severity(SeverityLevel.CRITICAL)
     public void checkHeaderMenuSectionsTest() {
 
         step("Перейти на главную страницу", () ->
                 mainPage.openPage());
-        step("Проверить, что верхнее меню состоит из 6 разделов", () ->
+        step("Проверить, что верхнее меню состоит из 7 разделов", () ->
                 mainPage.verifyHeaderMenuSize());
     }
-
 
     @ParameterizedTest(name = "В верхнем меню отображаются кнопки {0}")
     @MethodSource("headerItemsProvider")
@@ -45,7 +44,6 @@ public class WebTests extends TestBase {
         step("Проверить, что в верхнем меню есть кнопки {0}", () ->
                 mainPage.verifyHeaderMenuItems(buttons));
     }
-
 
     @ParameterizedTest(name = "В разделе {0} есть формат {1}")
     @CsvSource(value = {"Взрослым, Self-Study"})
@@ -60,8 +58,8 @@ public class WebTests extends TestBase {
                 mainPage.verifyProduct(productForm));
     }
 
-
     @Test
+    @Disabled
     @DisplayName("По ссылке Пройти тест осуществляется переход к тесту на подбор курса")
     @Severity(SeverityLevel.CRITICAL)
     public void checkSwitchingToCoursesTestThruLink() {
@@ -76,7 +74,7 @@ public class WebTests extends TestBase {
                 mainPage.verifyQuizTitle());
     }
 
-
+    @Disabled
     @ParameterizedTest(name = "После выбора цели обучения {0} и уровня языка {1} отображаются подходящие курсы")
     @CsvSource(value = {"Для работы, Средний", "Для заграничных поездок, Начинающий"})
     @Severity(SeverityLevel.NORMAL)
@@ -92,7 +90,6 @@ public class WebTests extends TestBase {
                 mainPage.verifySuitableCourses());
     }
 
-
     @ParameterizedTest(name = "В блоке {0} должен быть формат {1}")
     @CsvSource(value = {"Форматы обучения, Тренажёр слов"})
     @Severity(SeverityLevel.NORMAL)
@@ -105,7 +102,6 @@ public class WebTests extends TestBase {
         step("Проверить, что в Форматах обучения есть Тренажер слов", () ->
                 selfStudyPage.verifyStudyFormExists(studyFormsTitle, studyForm));
     }
-
 
     @ParameterizedTest(name = "На странице {0} должно быть {1}")
     @CsvSource(value = {"/clubs, Расписание"})
