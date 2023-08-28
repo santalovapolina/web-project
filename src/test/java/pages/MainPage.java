@@ -21,7 +21,7 @@ public class MainPage {
         return this;
     }
 
-    private ElementsCollection headerTabs = $(".navigation").$$(".navigation-item"),
+    private final ElementsCollection headerTabs = $(".navigation").$$(".navigation-item"),
             headerTabsTitles = $$x("//div[@class='header-menu-item']"),
             purposeAndLevel = $$x("//home-quiz-selection-item"),
             productForms = $$x("//div[@class='product-catalog-title']");
